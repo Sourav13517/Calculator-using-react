@@ -1,0 +1,41 @@
+.keypad-row{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+
+.Frame{
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    border-radius: 25px;
+    min-width: 265px;
+    align-items: center;
+    box-shadow:5px 5px 5px grey, -5px -5px 5px grey;
+}
+.frame-display{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    /* box-shadow: 2px 9px 10px 5px #aaaaaa; */
+    box-shadow:inset 5px 5px 5px grey,inset -2px -5px 0px whitesmoke;
+    /* margin: 20px 17px; */
+    margin-top: 40px;
+    border-radius: 10px;
+    /* box-shadow: 
+    6px 6px 8px rgba(13, 39, 80, 0.25),
+    -6px -6px 10px #fff,
+    
+    inset 5px 5px 8px rgba(13,39,80,0.2); */
+}
+.frame-keypad{
+    margin: 21px 20px;
+    margin-top: 22px;
+}
+.keypad{
+    margin: 8px;
+    display: flex;
+    justify-content: center;
+}

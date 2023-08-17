@@ -1,0 +1,13 @@
+.display{
+    border: none;
+    text-align: right;
+    font-size: 25px;
+    margin: 4px 9px;
+    letter-spacing: 1px;
+    width: 215px;
+    
+}
+
+input:active,input:focus{
+outline: none;
+}
