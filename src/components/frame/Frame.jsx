@@ -55,7 +55,7 @@ function Frame() {
                 setFirstClick(true);
                 setRawData("");
             }
-            else if (buttomName != preData) {
+            else if (buttomName !== preData) {
                 let per = new decimal(rawData).dividedBy(100);
                 setMiniDisplay(textResult + "%" + "=");
                 setRawData(per);
@@ -65,18 +65,22 @@ function Frame() {
             }
         }
         else if (buttomName === "Ans") {
-            if (preData != buttomName) {
+            if (preData !== buttomName) {
                 if (firstClick) {
                     setFirstClick(false);
                     setTextResult(textResult = "");
                     setRawData(rawData + previousResult);
                     setTextResult(textResult.concat(buttomName));
-                    setPreData(buttomName);
-                } else {
+                } else if (!oper.includes(buttomName)){
+                    setRawData(rawData +"*"+ previousResult);
+                    setTextResult(textResult + buttomName);
+                    console.log(test);
+                }
+                 else {
                     setRawData(rawData + previousResult);
                     setTextResult(textResult + buttomName);
-                    setPreData(buttomName);
                 }
+                setPreData(buttomName);
 
             }
         }
@@ -94,7 +98,7 @@ function Frame() {
                 setPreData(buttomName);
             }
             else {
-                if (preData != buttomName) {
+                if (preData !== buttomName) {
                     setRawData(rawData + buttomName);
                     setTextResult(textResult + buttomName);
                     setPreData(buttomName);
